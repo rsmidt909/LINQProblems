@@ -10,6 +10,11 @@ namespace linqProblems
     {
         static void Main(string[] args)
         {
+            Problems problems = new Problems();
+            //List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+
+            problems.checkLetter(problems.words);
+            Console.ReadLine();
         }
     }
 }
