@@ -12,7 +12,7 @@ namespace linqProblems
 
         public List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
 
-        public void checkLetter(List<string>words)
+        public void checkLetter(List<string> words)
         {
             var keyLetters = words.Where(w => w.Contains("th"));
 
@@ -20,9 +20,25 @@ namespace linqProblems
             {
                 Console.WriteLine(value);
             }
-            
+
         }
 
+
+
+        public void GetLetterFreq(string keyString)
+        {
+
+            var keyLetters = keyString.GroupBy(k => k).Select(x => x);
+
+            foreach (var value in keyLetters)
+            {
+
+                Console.WriteLine(value.Key + value.Count().ToString());
+                
+            }
+
+            
+        }
 
 
     }
